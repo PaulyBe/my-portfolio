@@ -1,0 +1,347 @@
+/* General */
+
+html, body {
+    height: 100%; /* Important: ensures html and body take full viewport height */
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: rgb(240, 251, 255);
+    /* Remove display: flex; flex-direction: column; from html, body */
+    /* This setup is for a "sticky footer" where the footer is always visible at the bottom,
+       even if content is short. For a footer only visible at the *bottom of content*,
+       we use different positioning. */
+    font-size: 1rem;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* Apply box-sizing globally for easier layout management */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+main {
+    /* No flex-grow: 1; here anymore for this specific footer behavior */
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Header */
+
+header {
+    background-color: #fab1b1;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav.header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.nav-links li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border: black 1px solid;
+    padding: 8px 15px;
+    background: #c5fdde;
+    box-shadow: 2.5px 2.5px 2.5px black;
+    border-radius: 5px;
+}
+
+.nav-links li a:hover {
+    background: #4dff9d;
+}
+
+.nav-links li.active a {
+    background: #4dff9d;
+}
+
+/* Body */
+
+/* Home Page */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+    padding: 50px 20px 20px 20px;
+    margin: 0 auto;
+}
+
+.text-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.text-group p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.home-intro-section {
+    width: 100%;
+    height: auto; /* Changed from fixed 40em to auto to allow content to dictate height */
+    min-height: 50vh;
+    --color: #E1E1E1;
+    background-color: #F3F3F3;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    background-size: 55px 55px;
+    background-attachment: scroll;
+}
+
+.icon-wrapper {
+    margin-left: 0;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.icon {
+    width: 12rem;
+    height: 12rem;
+    margin-top: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.home-button {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border: black 2px solid;
+    background: #f89849;
+    display: inline-block;
+    padding: 8px 15px;
+    margin-top: 20px;
+    vertical-align: middle;
+    box-shadow: 2.5px 2.5px 2.5px black;
+    border-radius: 5px;
+}
+
+.home-button:hover {
+    background: #4dff9d;
+}
+
+.home-button:active {
+    translate: 1px 1px;
+    box-shadow: 1px 1px 1px black;
+}
+
+
+/* About Page */
+
+.about-me-section {
+    width: 100%; /* Changed from 80% for better mobile adaptability */
+    padding: 20px;
+    /* Removed align-items and justify-content from section as they are block-level */
+}
+
+.about-me-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;
+}
+
+.about-me-text-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1rem;
+    gap: 15px;
+}
+
+.about-me-text-group p {
+    margin: 0;
+}
+
+.paragraph-with-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.paragraph-with-icon p {
+    margin: 0;
+    text-align: center;
+}
+
+.about-me-icons {
+    width: 8rem;
+    height: 8rem;
+    margin-top: 0;
+    flex-shrink: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Projects Section */
+
+.projects-section {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(#3f87a6 10%, #ebf8e1a2 10%),
+        linear-gradient(to right, #ebf8e100 10%, #c73030 10% 10.2%, #ebf8e100 10.5%);
+    background-size: 100% 25px, 100% 100%;
+    background-repeat: repeat, no-repeat;
+    overflow-x: hidden;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    background-color: #b4fff9;
+    padding: 15px; /* Consistent padding */
+    font-weight: bold;
+    font-size: 0.9rem; /* Consistent font size */
+    /* Key properties for sticky footer that appears at the bottom of content */
+    position: sticky;
+    bottom: 0; /* Sticks to the bottom of the viewport */
+    width: 100%; /* Ensures it spans the full width */
+    z-index: 100; /* Ensure it's above other content if anything overlaps */
+}
+
+
+/* ========================================= */
+/* Media Queries for Desktop/Larger Screens */
+/* ========================================= */
+
+@media (min-width: 768px) {
+
+    /* General */
+    body {
+        font-size: 1.125rem;
+    }
+
+    /* Header */
+    header {
+        padding: 15px 30px;
+    }
+
+    nav.header {
+        justify-content: flex-end;
+        padding: 20px 40px;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 30px;
+        padding: 0;
+    }
+
+    /* Home Page */
+    .container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        padding: 100px 50px 50px 100px;
+    }
+
+    .text-group {
+        width: 60%;
+        font-size: 1.4rem;
+        text-align: left;
+    }
+
+    .icon-wrapper {
+        margin-left: 15px;
+        margin-top: 0;
+    }
+
+    .icon {
+        width: 18rem;
+        height: 18rem;
+        margin-top: 50px;
+        margin-left: initial;
+        margin-right: initial;
+    }
+
+    .home-button {
+        margin-top: 1px;
+    }
+
+
+    /* About Page */
+    .about-me-section {
+        width: 80%; /* Restore desktop width for the section */
+        margin: 0 auto; /* Center the section on desktop */
+        padding: 50px 0;
+    }
+
+    .about-me-container {
+        flex-direction: row;
+        width: 80%;
+        padding: 100px 50px 50px 100px;
+    }
+
+    .about-me-text-group {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .paragraph-with-icon {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 50px;
+        text-align: left;
+    }
+
+    .paragraph-with-icon p {
+        text-align: left;
+    }
+
+    .about-me-icons {
+        width: 14rem;
+        height: 14rem;
+    }
+
+    /* Projects Section */
+    .projects-section {
+        padding: 50px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px;
+        font-size: 1rem;
+        /* No flex-shrink: 0; needed here as the flex context has been removed from html,body */
+    }
+}
