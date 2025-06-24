@@ -1,27 +1,24 @@
 /* General */
 
 html, body {
-    height: 100%; /* Important: ensures html and body take full viewport height */
+    height: 100%;
     margin: 0;
     padding: 0;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: rgb(240, 251, 255);
-    /* Remove display: flex; flex-direction: column; from html, body */
-    /* This setup is for a "sticky footer" where the footer is always visible at the bottom,
-       even if content is short. For a footer only visible at the *bottom of content*,
-       we use different positioning. */
-    font-size: 1rem;
-    line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
+    font-size: 16px;
+    line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* Apply box-sizing globally for easier layout management */
+/* Apply box-sizing globally */
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 main {
-    /* No flex-grow: 1; here anymore for this specific footer behavior */
+    min-height: calc(100vh - 140px);
     overflow-x: hidden;
     width: 100%;
 }
@@ -29,18 +26,20 @@ main {
 /* Header */
 
 header {
-    background-color: #fab1b1;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     width: 100%;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 nav.header {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     padding: 0;
 }
@@ -48,30 +47,37 @@ nav.header {
 .nav-links {
     list-style: none;
     margin: 0;
-    padding: 10px 0;
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
 .nav-links li a {
-    color: black;
+    color: #333;
     text-decoration: none;
-    font-weight: bold;
-    border: black 1px solid;
-    padding: 8px 15px;
-    background: #c5fdde;
-    box-shadow: 2.5px 2.5px 2.5px black;
-    border-radius: 5px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    display: block;
+    text-align: center;
+    min-width: 80px;
 }
 
 .nav-links li a:hover {
-    background: #4dff9d;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #764ba2, #667eea);
 }
 
 .nav-links li.active a {
-    background: #4dff9d;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    box-shadow: 0 8px 25px rgba(240, 147, 251, 0.4);
 }
 
 /* Body */
@@ -82,9 +88,10 @@ nav.header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    width: 90%;
-    padding: 50px 20px 20px 20px;
+    justify-content: center;
+    width: 95%;
+    max-width: 1200px;
+    padding: 40px 20px;
     margin: 0 auto;
 }
 
@@ -92,83 +99,114 @@ nav.header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-weight: 500;
+    font-size: 1.1rem;
     text-align: center;
+    color: white;
+}
+
+.text-group h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
 }
 
 .text-group p {
-    margin: 0;
-    margin-bottom: 15px;
+    margin: 0 0 20px 0;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .home-intro-section {
     width: 100%;
-    height: auto; /* Changed from fixed 40em to auto to allow content to dictate height */
-    min-height: 50vh;
-    --color: #E1E1E1;
-    background-color: #F3F3F3;
-    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
-        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
-    background-size: 55px 55px;
-    background-attachment: scroll;
+    min-height: 80vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-intro-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="90" cy="40" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+    pointer-events: none;
 }
 
 .icon-wrapper {
-    margin-left: 0;
-    margin-top: 30px;
+    margin-top: 40px;
     text-align: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
 }
 
 .icon {
-    width: 12rem;
-    height: 12rem;
-    margin-top: 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 200px;
+    height: 200px;
     max-width: 100%;
     height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+    border-radius: 20px;
 }
 
 .home-button {
-    color: black;
+    color: white;
     text-decoration: none;
-    font-weight: bold;
-    border: black 2px solid;
-    background: #f89849;
+    font-weight: 600;
+    border: none;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
     display: inline-block;
-    padding: 8px 15px;
+    padding: 15px 30px;
     margin-top: 20px;
-    vertical-align: middle;
-    box-shadow: 2.5px 2.5px 2.5px black;
-    border-radius: 5px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(240, 147, 251, 0.3);
 }
 
 .home-button:hover {
-    background: #4dff9d;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(240, 147, 251, 0.4);
+    background: linear-gradient(135deg, #f5576c, #f093fb);
 }
 
 .home-button:active {
-    translate: 1px 1px;
-    box-shadow: 1px 1px 1px black;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(240, 147, 251, 0.3);
 }
-
 
 /* About Page */
 
 .about-me-section {
-    width: 100%; /* Changed from 80% for better mobile adaptability */
-    padding: 20px;
-    /* Removed align-items and justify-content from section as they are block-level */
+    width: 100%;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    margin: 40px 0;
 }
 
 .about-me-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
@@ -176,22 +214,45 @@ nav.header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 1rem;
-    gap: 15px;
+    gap: 30px;
+    color: white;
+}
+
+.about-me-text-group h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    text-align: center;
 }
 
 .about-me-text-group p {
     margin: 0;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .paragraph-with-icon {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     width: 100%;
     text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.paragraph-with-icon:hover {
+    transform: translateY(-5px);
 }
 
 .paragraph-with-icon p {
@@ -200,70 +261,179 @@ nav.header {
 }
 
 .about-me-icons {
-    width: 8rem;
-    height: 8rem;
-    margin-top: 0;
-    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
     max-width: 100%;
     height: auto;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
 }
 
 /* Projects Section */
 
 .projects-section {
     width: 100%;
-    padding: 20px;
-    background: linear-gradient(#3f87a6 10%, #ebf8e1a2 10%),
-        linear-gradient(to right, #ebf8e100 10%, #c73030 10% 10.2%, #ebf8e100 10.5%);
-    background-size: 100% 25px, 100% 100%;
-    background-repeat: repeat, no-repeat;
-    overflow-x: hidden;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    margin: 40px 0;
 }
 
+.projects-section .container {
+    max-width: 1200px;
+}
+
+.projects-section .text-group h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.toolstack {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.toolstack li {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.toolstack li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.project-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    padding: 15px 30px;
+    border-radius: 25px;
+    margin: 20px 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(240, 147, 251, 0.3);
+}
+
+.project-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(240, 147, 251, 0.4);
+    background: linear-gradient(135deg, #f5576c, #f093fb);
+}
+
+/* Contact Page */
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #f093fb;
+    box-shadow: 0 0 20px rgba(240, 147, 251, 0.3);
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(240, 147, 251, 0.3);
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(240, 147, 251, 0.4);
+}
 
 /* Footer */
 
 footer {
     text-align: center;
-    background-color: #b4fff9;
-    padding: 15px; /* Consistent padding */
-    font-weight: bold;
-    font-size: 0.9rem; /* Consistent font size */
-    /* Key properties for sticky footer that appears at the bottom of content */
-    position: sticky;
-    bottom: 0; /* Sticks to the bottom of the viewport */
-    width: 100%; /* Ensures it spans the full width */
-    z-index: 100; /* Ensure it's above other content if anything overlaps */
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: auto;
 }
 
-
 /* ========================================= */
-/* Media Queries for Desktop/Larger Screens */
+/* Media Queries for Tablet and Desktop */
 /* ========================================= */
 
 @media (min-width: 768px) {
-
     /* General */
     body {
-        font-size: 1.125rem;
+        font-size: 18px;
     }
 
     /* Header */
     header {
-        padding: 15px 30px;
+        padding: 20px 40px;
     }
 
     nav.header {
         justify-content: flex-end;
-        padding: 20px 40px;
     }
 
     .nav-links {
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 30px;
-        padding: 0;
+        gap: 25px;
     }
 
     /* Home Page */
@@ -271,77 +441,111 @@ footer {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        width: 80%;
-        padding: 100px 50px 50px 100px;
+        width: 90%;
+        padding: 80px 40px;
     }
 
     .text-group {
-        width: 60%;
-        font-size: 1.4rem;
+        width: 55%;
+        font-size: 1.2rem;
         text-align: left;
     }
 
+    .text-group h2 {
+        font-size: 3.5rem;
+    }
+
     .icon-wrapper {
-        margin-left: 15px;
+        margin-left: 40px;
         margin-top: 0;
     }
 
     .icon {
-        width: 18rem;
-        height: 18rem;
-        margin-top: 50px;
-        margin-left: initial;
-        margin-right: initial;
+        width: 300px;
+        height: 300px;
     }
-
-    .home-button {
-        margin-top: 1px;
-    }
-
 
     /* About Page */
     .about-me-section {
-        width: 80%; /* Restore desktop width for the section */
-        margin: 0 auto; /* Center the section on desktop */
-        padding: 50px 0;
+        padding: 80px 40px;
     }
 
     .about-me-container {
-        flex-direction: row;
-        width: 80%;
-        padding: 100px 50px 50px 100px;
+        padding: 40px;
     }
 
     .about-me-text-group {
-        width: 100%;
         font-size: 1.1rem;
     }
 
     .paragraph-with-icon {
         flex-direction: row;
-        align-items: flex-start;
-        gap: 50px;
+        align-items: center;
+        gap: 40px;
         text-align: left;
+        padding: 40px;
+    }
+
+    .paragraph-with-icon:nth-child(even) {
+        flex-direction: row-reverse;
     }
 
     .paragraph-with-icon p {
         text-align: left;
+        flex: 1;
     }
 
     .about-me-icons {
-        width: 14rem;
-        height: 14rem;
+        width: 120px;
+        height: 120px;
+        flex-shrink: 0;
     }
 
     /* Projects Section */
     .projects-section {
-        padding: 50px;
+        padding: 80px 40px;
     }
 
-    /* Footer */
-    footer {
-        padding: 20px;
-        font-size: 1rem;
-        /* No flex-shrink: 0; needed here as the flex context has been removed from html,body */
+    .toolstack {
+        gap: 20px;
     }
+
+    .toolstack li {
+        padding: 15px 25px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 85%;
+        max-width: 1200px;
+    }
+
+    .text-group h2 {
+        font-size: 4rem;
+    }
+
+    .about-me-icons {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text-group,
+.paragraph-with-icon,
+.projects-section .container {
+    animation: fadeInUp 0.8s ease-out;
 }
