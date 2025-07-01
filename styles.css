@@ -5,7 +5,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #E5E5E5;
     background-attachment: fixed;
     font-size: 16px;
     line-height: 1.6;
@@ -27,7 +27,6 @@ main {
 
 header {
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
     width: 100%;
     padding: 15px 20px;
     position: sticky;
@@ -55,29 +54,30 @@ nav.header {
 }
 
 .nav-links li a {
-    color: #333;
+    color: #000000;
     text-decoration: none;
     font-weight: 600;
-    border: 2px solid transparent;
     padding: 12px 24px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
     border-radius: 25px;
     transition: all 0.3s ease;
     display: block;
     text-align: center;
     min-width: 80px;
+    border: 3px solid #000000;
+    box-shadow: 3px 3px 0 #000000;+
+    overflow: hidden;
 }
 
 .nav-links li a:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
-    background: linear-gradient(135deg, #764ba2, #667eea);
+    background: #b6f6ff;
 }
 
 .nav-links li.active a {
-    background: linear-gradient(135deg, #f093fb, #f5576c);
-    box-shadow: 0 8px 25px rgba(240, 147, 251, 0.4);
+    background: #6ED3CF;
+    translate: 3px 3px;
+    box-shadow: 0 0 0 #000000;
 }
 
 /* Body */
@@ -108,7 +108,7 @@ nav.header {
 .text-group h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    background: linear-gradient(135deg, #f093fb, #f5576c);
+    background: black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -118,13 +118,13 @@ nav.header {
 .text-group p {
     margin: 0 0 20px 0;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.9);
+    color: black;
 }
 
 .home-intro-section {
     width: 100%;
     min-height: 80vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #E5E5E5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,15 +139,12 @@ nav.header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="90" cy="40" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.3;
     pointer-events: none;
 }
 
 .icon-wrapper {
     margin-top: 40px;
     text-align: center;
-    animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -160,33 +157,33 @@ nav.header {
     height: 200px;
     max-width: 100%;
     height: auto;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
     border-radius: 20px;
 }
 
 .home-button {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: 600;
     border: none;
-    background: linear-gradient(135deg, #f093fb, #f5576c);
+    background: #9068BE;
     display: inline-block;
     padding: 15px 30px;
     margin-top: 20px;
     border-radius: 25px;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(240, 147, 251, 0.3);
+    transition: all 0.1s ease;
+    border: 3px solid #000000;
+    box-shadow: 3px 3px 0 #000000;+
+    overflow: hidden;
 }
 
 .home-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(240, 147, 251, 0.4);
-    background: linear-gradient(135deg, #f5576c, #f093fb);
+    box-shadow: ;
+    background: #b6f6ff;
 }
 
 .home-button:active {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(240, 147, 251, 0.3);
+    translate: 3px 3px;
+    box-shadow: 0 0 0 #000000;
 }
 
 /* About Page */
@@ -194,7 +191,7 @@ nav.header {
 .about-me-section {
     width: 100%;
     padding: 60px 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #DCDCDC;
     backdrop-filter: blur(10px);
     margin: 40px 0;
 }
@@ -223,7 +220,7 @@ nav.header {
 .about-me-text-group h2 {
     font-size: 2.2rem;
     margin-bottom: 30px;
-    background: linear-gradient(135deg, #f093fb, #f5576c);
+    background: black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -234,7 +231,7 @@ nav.header {
 .about-me-text-group p {
     margin: 0;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.9);
+    color: black;
 }
 
 .paragraph-with-icon {
@@ -244,15 +241,16 @@ nav.header {
     gap: 20px;
     width: 100%;
     text-align: center;
-    background: rgba(255, 255, 255, 0.1);
+    background: #ffeddc;
     padding: 30px;
     border-radius: 20px;
     backdrop-filter: blur(10px);
     transition: transform 0.3s ease;
+    border: 3px solid #000000;
 }
 
 .paragraph-with-icon:hover {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
 }
 
 .paragraph-with-icon p {
@@ -265,7 +263,6 @@ nav.header {
     height: 80px;
     max-width: 100%;
     height: auto;
-    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
 }
 
 /* Projects Section */
@@ -273,7 +270,7 @@ nav.header {
 .projects-section {
     width: 100%;
     padding: 60px 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #DCDCDC;
     backdrop-filter: blur(10px);
     margin: 40px 0;
 }
@@ -285,7 +282,7 @@ nav.header {
 .projects-section .text-group h2 {
     font-size: 2.2rem;
     margin-bottom: 20px;
-    background: linear-gradient(135deg, #f093fb, #f5576c);
+    background: black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -303,101 +300,105 @@ nav.header {
 }
 
 .toolstack li {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
+    background: #ff66a3;
+    color: rgb(0, 0, 0);
     padding: 10px 20px;
-    border-radius: 20px;
+    border-radius: 5px;
     font-weight: 600;
-    transition: all 0.3s ease;
+    border: 3px solid #000000;
 }
 
-.toolstack li:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+.card {
+  font-family: Montserrat, sans-serif;
+  width: 400px;
+  height: 300px;
+  translate: -6px -6px;
+  background: #ff66a3;
+  border: 3px solid #000000;
+  box-shadow: 12px 12px 0 #000000;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin: 35px auto 35px 0px;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.head {
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+  height: 38px;
+  background: #ffffff;
+  padding: 5px 12px;
+  color: #000000;
+  border-bottom: 3px solid #000000;
+}
+
+.content {
+  padding: 15px 12px 0px;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  
 }
 
 .project-link {
     display: inline-block;
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: 600;
-    background: linear-gradient(135deg, #f093fb, #f5576c);
+    background: #88AAEE;
     padding: 15px 30px;
     border-radius: 25px;
-    margin: 20px 10px;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(240, 147, 251, 0.3);
+    border: 3px solid #000000;
+    box-shadow: 3px 3px 0 #000000;
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
 }
 
 .project-link:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(240, 147, 251, 0.4);
-    background: linear-gradient(135deg, #f5576c, #f093fb);
+    background: #d8dbaa;
+}
+
+.project-link:active {
+    translate: 3px 3px;
+    box-shadow: 0 0 0 #000000;
 }
 
 /* Contact Page */
 
-.contact-form {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 40px;
-    border-radius: 20px;
-    margin-top: 40px;
-    width: 100%;
-    max-width: 600px;
-}
-
-.form-group {
-    margin-bottom: 25px;
-}
-
-.form-group label {
-    display: block;
-    color: white;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 15px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #f093fb;
-    box-shadow: 0 0 20px rgba(240, 147, 251, 0.3);
-}
-
-.submit-btn {
-    background: linear-gradient(135deg, #f093fb, #f5576c);
-    color: white;
-    border: none;
-    padding: 15px 40px;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: 16px;
+.contact-button {
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100px;
+    height: 100px; 
+    background-color: #88AAEE; 
+    border: 3px solid #000000;
+    box-shadow: 5px 5px 0 #000000;
+    border-radius: 8px; 
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(240, 147, 251, 0.3);
+    text-decoration: none; 
+    margin: 30px;
 }
 
-.submit-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(240, 147, 251, 0.4);
+.contact-button:hover {
+    background-color: #d8dbaa; 
+ 
+}
+
+.contact-button:active {
+    background-color: #d8dbaa; 
+    box-shadow: 1px 1px 0 #000000;
+    transform: translate(4px, 4px); 
+}
+.contact-button img {
+    max-width: 60%; 
+    max-height: 60%;
+    display: block; 
 }
 
 /* Footer */
@@ -405,17 +406,14 @@ nav.header {
 footer {
     text-align: center;
     background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
     padding: 20px;
     font-weight: 600;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     margin-top: auto;
 }
 
-/* ========================================= */
 /* Media Queries for Tablet and Desktop */
-/* ========================================= */
 
 @media (min-width: 768px) {
     /* General */
@@ -513,6 +511,11 @@ footer {
     .toolstack li {
         padding: 15px 25px;
         font-size: 1.1rem;
+    }
+    .card {
+        width: 120px;
+        height: 120px;
+        flex-shrink: 0;
     }
 }
 
