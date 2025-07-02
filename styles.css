@@ -543,9 +543,13 @@ footer {
 
     .card {
         width: 400px;
-        height: 300px;
+        height: 320px;
         margin: 0;
-        padding-bottom: 70px; 
+        padding-bottom: 80px;
+    }
+
+    .content {
+        padding: 15px 12px 80px 12px;
     }
 }
 
