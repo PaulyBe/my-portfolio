@@ -1,156 +1,331 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    /* background: linear-gradient(45deg, #1d3a88, #76a1b3, #865243, #3f9c71); */
-    /* background-size: 200% 300%; */
-    /* animation: gradientBG 10s infinite alternate; */
-    background: rgb(236, 236, 236);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #E5E5E5;
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
 }
 
-
+/* Container */
 .container {
-    width: 400px;
-    margin: auto;
-    padding: 60px;
-    border: 0px;;
-    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 3px solid #000000;
+    box-shadow: 8px 8px 0 #000000;
 }
+
+/* Header */
 h1 {
     background: #ff66a3;
-    color: rgb(0, 0, 0);
-    border: black 3px solid;
-    padding: 15px;
-    margin-bottom: 50px;
-    box-shadow: 10px 10px 0 black;
+    color: #000000;
+    border: 3px solid #000000;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 6px 6px 0 #000000;
+    border-radius: 15px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
 h1:hover {
-    translate: -6px
+    transform: translate(-3px, -3px);
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
 }
 
 #taskInput {
-    color: black;
-    background: white;
-    border: black 3px solid;
-    padding: 5px 10px;
-    margin: 10px;
-    font-weight: 550;
-    box-shadow: 3px 3px 0 black;
+    color: #000000;
+    background: #ffffff;
+    border: 3px solid #000000;
+    padding: 15px 20px;
+    font-weight: 600;
+    box-shadow: 4px 4px 0 #000000;
     font-size: 16px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    width: 100%;
 }
 
 #taskInput:focus {
     outline: none;
-    border-color: #000000;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000000;
 }
 
 #taskInput::placeholder {
-    color: #999;
+    color: #666;
+    font-weight: 500;
 }
 
+#addTaskBtn {
+    background: #4df88c;
+    color: #000000;
+    border: 3px solid #000000;
+    padding: 15px 25px;
+    font-weight: 600;
+    box-shadow: 4px 4px 0 #000000;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+#addTaskBtn:hover {
+    background: #1ac2ff;
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0 #000000;
+}
+
+#addTaskBtn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #000000;
+}
+
+/* Task List */
 ul {
     list-style: none;
     padding: 0;
-    font-weight: 550;
+    margin: 0;
 }
 
 li {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    border-bottom: 2px solid rgb(0, 0, 0);
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid #000000;
+    border-radius: 10px;
     font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 0 #000000;
 }
 
 li:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 1);
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 #000000;
 }
 
 li span {
     flex: 1;
     text-align: left;
     padding-right: 15px;
-}
-
-.home-button {
-    background: #74c7ff;
-    color: rgb(0, 0, 0);
-    border: black 3px solid;
-    padding: 5px 10px;
-    margin: 10px;
-    font-weight: 600;
-    box-shadow: 3px 3px 0 black;
-    font-size: 26px;
-}
-
-#addTaskBtn {
-    background: #4df88c;
-    color: rgb(0, 0, 0);
-    border: black 3px solid;
-    padding: 5px 10px;
-    margin: 10px;
-    font-weight: 600;
-    box-shadow: 3px 3px 0 black;
-    font-size: 16px;
-}
-
-#addTaskBtn:hover,
-.home-button:hover {
-    background: #1ac2ff;
-    cursor: pointer;
-}
-
-#addTaskBtn:active,
-.deleteBtn:active {
-    box-shadow: 1.5px 1.5px 0 black;
-    translate: 1.5px 1.5px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .deleteBtn {
     background: #ff006a;
-    color: rgb(0, 0, 0);
-    border: black 3px solid;
-    padding: 3px 10px;
+    color: #000000;
+    border: 3px solid #000000;
+    padding: 8px 15px;
     font-weight: 600;
-    box-shadow: 3px 3px 0 black;
+    box-shadow: 3px 3px 0 #000000;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    font-size: 14px;
 }
 
+.deleteBtn:hover {
+    background: #ff3385;
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 #000000;
+}
 
+.deleteBtn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 #000000;
+}
+
+/* Home Button */
 .home-button {
+    background: #74c7ff;
+    color: #000000;
+    border: 3px solid #000000;
+    padding: 12px 25px;
+    font-weight: 600;
+    box-shadow: 4px 4px 0 #000000;
+    font-size: 18px;
     text-decoration: none;
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
+.home-button:hover {
+    background: #1ac2ff;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000000;
+}
+
+.home-button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #000000;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+    font-style: italic;
+    font-size: 18px;
+}
+
+/* Tablet Styles */
+@media (min-width: 576px) {
+    body {
+        padding: 40px;
+    }
+    
     .container {
-        margin: 20px auto;
-        padding: 30px 20px;
+        padding: 60px 40px;
     }
     
     h1 {
-        font-size: 1.5rem;
-        padding: 15px;
+        font-size: 2.5rem;
+        padding: 25px;
+    }
+    
+    .input-section {
+        flex-direction: row;
+        align-items: stretch;
     }
     
     #taskInput {
-        width: calc(100% - 35px);
-        margin: 10px 5px;
+        flex: 1;
+        margin-right: 15px;
+        font-size: 18px;
+        padding: 18px 25px;
     }
     
     #addTaskBtn {
-        width: calc(100% - 10px);
-        margin: 10px 5px;
+        width: auto;
+        min-width: 150px;
+        font-size: 18px;
+        padding: 18px 30px;
     }
     
     li {
-        padding: 12px 15px;
-        font-size: 14px;
+        padding: 20px 25px;
+        font-size: 18px;
     }
     
     .deleteBtn {
-        padding: 6px 12px;
-        font-size: 12px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 800px;
+        padding: 80px 60px;
+    }
+    
+    h1 {
+        font-size: 3rem;
+        padding: 30px;
+        margin-bottom: 40px;
+    }
+    
+    .input-section {
+        margin-bottom: 40px;
+    }
+    
+    #taskInput {
+        font-size: 20px;
+        padding: 20px 30px;
+    }
+    
+    #addTaskBtn {
+        font-size: 20px;
+        padding: 20px 40px;
+        min-width: 180px;
+    }
+    
+    li {
+        padding: 25px 30px;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .deleteBtn {
+        padding: 12px 25px;
+        font-size: 18px;
+    }
+    
+    .home-button {
+        font-size: 20px;
+        padding: 15px 30px;
+    }
+}
+
+/* Animation for new tasks */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+li {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus,
+a:focus {
+    outline: 3px solid #4A90E2;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    body {
+        background: #ffffff;
+    }
+    
+    .container {
+        background: #f0f0f0;
+        border: 4px solid #000000;
+    }
+    
+    li {
+        background: #ffffff;
+        border: 4px solid #000000;
     }
 }
