@@ -66,7 +66,7 @@ nav.header {
     text-align: center;
     min-width: 80px;
     border: 3px solid #000000;
-    box-shadow: 3px 3px 0 #000000;+
+    box-shadow: 3px 3px 0 #000000;
     overflow: hidden;
 }
 
@@ -171,7 +171,7 @@ nav.header {
     border-radius: 25px;
     transition: all 0.1s ease;
     border: 3px solid #000000;
-    box-shadow: 3px 3px 0 #000000;+
+    box-shadow: 3px 3px 0 #000000;
     overflow: hidden;
 }
 
@@ -276,6 +276,7 @@ nav.header {
 .projects-section .container {
     max-width: 1200px;
     align-items: flex-start;
+    align-items: flex-start;
 }
 
 .projects-section .text-group {
@@ -298,9 +299,11 @@ nav.header {
     background-clip: text;
     font-weight: 700;
     text-align: left;
+    text-align: left;
 }
 
 .projects-section .text-group p {
+    text-align: left;
     text-align: left;
     margin: 0 0 20px 0;
 }
@@ -310,6 +313,7 @@ nav.header {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     justify-content: flex-start;
     gap: 15px;
     margin: 30px 0;
@@ -336,7 +340,7 @@ nav.header {
   box-shadow: 12px 12px 0 #000000;
   overflow: hidden;
   transition: all 0.3s ease;
-  margin: 20px auto;
+  margin: 20px 0;
   position: relative;
   padding-bottom: 90px;
   box-sizing: border-box;
@@ -374,12 +378,11 @@ nav.header {
     box-shadow: 3px 3px 0 #000000;
     position: absolute;
     bottom: 15px;
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Shift left by half its width to truly center */
-    box-sizing: border-box; /* Ensure padding/border don't break width on smaller screens */
-    max-width: calc(100% - 30px); /* Adjust to prevent horizontal overflow if card is very narrow */
-    text-align: center; /* Ensure text within the link is centered */
-    white-space: nowrap; /* Prevent line breaks within the link text if possible */
+    left: 15px;
+    right: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .project-link:hover {
@@ -392,6 +395,31 @@ nav.header {
 }
 
 /* Contact Page */
+
+.text-group-contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.text-group-contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.text-group-contact p {
+    margin: 0 0 20px 0;
+    line-height: 1.7;
+    color: black;
+}
 
 .contact-button {
     display: inline-flex;
@@ -540,6 +568,7 @@ footer {
         width: auto;
         height: auto;
         translate: 0 0;
+        padding: 15px 12px 90px 12px;
     }
 
     .card {
@@ -547,10 +576,6 @@ footer {
         height: 320px;
         margin: 0;
         padding-bottom: 80px;
-    }
-
-    .content {
-        padding: 15px 12px 80px 12px;
     }
 }
 
