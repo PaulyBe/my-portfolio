@@ -7,9 +7,9 @@ html, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #E5E5E5;
     background-attachment: fixed;
-    font-size: 16px;
+    font-size: 16px; /* Base font size for mobile */
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scroll from overflow */
 }
 
 /* Apply box-sizing globally */
@@ -97,12 +97,11 @@ nav.header {
 
 .text-group {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Default for mobile/small screens */
     width: 100%;
     font-weight: 500;
     font-size: 1.1rem;
     text-align: center;
-    color: white;
 }
 
 .text-group h2 {
@@ -177,7 +176,6 @@ nav.header {
 }
 
 .home-button:hover {
-    box-shadow: ;
     background: #b6f6ff;
 }
 
@@ -279,6 +277,17 @@ nav.header {
     max-width: 1200px;
 }
 
+.projects-section .text-group {
+    display: flex; /* Make children (cards) display in a row */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: center; /* Center cards when they wrap */
+    gap: 30px; /* Space between cards */
+    flex-direction: column; /* Keep the h2 and p stacked */
+    align-items: center; /* Center h2 and p horizontally */
+    text-align: center; /* Center text within h2 and p */
+    width: 100%; /* Ensure it takes full width */
+}
+
 .projects-section .text-group h2 {
     font-size: 2.2rem;
     margin-bottom: 20px;
@@ -287,6 +296,12 @@ nav.header {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: 700;
+    text-align: center;
+}
+
+.projects-section .text-group p {
+    text-align: center;
+    margin: 0 0 20px 0;
 }
 
 .toolstack {
@@ -310,17 +325,20 @@ nav.header {
 
 .card {
   font-family: Montserrat, sans-serif;
-  width: 400px;
-  height: 300px;
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  min-height: 250px;
   translate: -6px -6px;
   background: #ff66a3;
   border: 3px solid #000000;
   box-shadow: 12px 12px 0 #000000;
   overflow: hidden;
   transition: all 0.3s ease;
-  margin: 35px auto 35px 0px;
+  margin: 20px auto;
   position: relative;
-  padding-bottom: 40px;
+  padding-bottom: 90px;
+  box-sizing: border-box;
 }
 
 .head {
@@ -340,7 +358,6 @@ nav.header {
   font-size: 16px;
   font-weight: 600;
   color: black;
-  
 }
 
 .project-link {
@@ -356,7 +373,12 @@ nav.header {
     box-shadow: 3px 3px 0 #000000;
     position: absolute;
     bottom: 15px;
-    left: 10px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Shift left by half its width to truly center */
+    box-sizing: border-box; /* Ensure padding/border don't break width on smaller screens */
+    max-width: calc(100% - 30px); /* Adjust to prevent horizontal overflow if card is very narrow */
+    text-align: center; /* Ensure text within the link is centered */
+    white-space: nowrap; /* Prevent line breaks within the link text if possible */
 }
 
 .project-link:hover {
@@ -371,34 +393,34 @@ nav.header {
 /* Contact Page */
 
 .contact-button {
-    display: inline-flex; 
-    justify-content: center; 
-    align-items: center; 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 100px;
-    height: 100px; 
-    background-color: #88AAEE; 
+    height: 100px;
+    background-color: #88AAEE;
     border: 3px solid #000000;
     box-shadow: 5px 5px 0 #000000;
-    border-radius: 8px; 
+    border-radius: 8px;
     cursor: pointer;
-    text-decoration: none; 
+    text-decoration: none;
     margin: 30px;
+    margin-top: 40px;
 }
 
 .contact-button:hover {
-    background-color: #d8dbaa; 
- 
+    background-color: #d8dbaa;
 }
 
 .contact-button:active {
-    background-color: #d8dbaa; 
+    background-color: #d8dbaa;
     box-shadow: 1px 1px 0 #000000;
-    transform: translate(4px, 4px); 
+    transform: translate(4px, 4px);
 }
 .contact-button img {
-    max-width: 60%; 
+    max-width: 60%;
     max-height: 60%;
-    display: block; 
+    display: block;
 }
 
 /* Footer */
@@ -415,7 +437,7 @@ footer {
 
 /* Media Queries for Tablet and Desktop */
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
     /* General */
     body {
         font-size: 18px;
@@ -512,10 +534,18 @@ footer {
         padding: 15px 25px;
         font-size: 1.1rem;
     }
+
+    .content {
+        width: auto;
+        height: auto;
+        translate: 0 0;
+    }
+
     .card {
-        width: 120px;
-        height: 120px;
-        flex-shrink: 0;
+        width: 400px;
+        height: 300px;
+        margin: 0;
+        padding-bottom: 70px; 
     }
 }
 
