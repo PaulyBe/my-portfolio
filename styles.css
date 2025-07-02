@@ -275,17 +275,18 @@ nav.header {
 
 .projects-section .container {
     max-width: 1200px;
+    align-items: flex-start;
 }
 
 .projects-section .text-group {
-    display: flex; /* Make children (cards) display in a row */
-    flex-wrap: wrap; /* Allow cards to wrap to the next line */
-    justify-content: center; /* Center cards when they wrap */
-    gap: 30px; /* Space between cards */
-    flex-direction: column; /* Keep the h2 and p stacked */
-    align-items: center; /* Center h2 and p horizontally */
-    text-align: center; /* Center text within h2 and p */
-    width: 100%; /* Ensure it takes full width */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
 }
 
 .projects-section .text-group h2 {
@@ -296,11 +297,11 @@ nav.header {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: 700;
-    text-align: center;
+    text-align: left;
 }
 
 .projects-section .text-group p {
-    text-align: center;
+    text-align: left;
     margin: 0 0 20px 0;
 }
 
@@ -309,7 +310,7 @@ nav.header {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 15px;
     margin: 30px 0;
 }
@@ -335,7 +336,7 @@ nav.header {
   box-shadow: 12px 12px 0 #000000;
   overflow: hidden;
   transition: all 0.3s ease;
-  margin: 20px auto;
+  margin: 20px 0;
   position: relative;
   padding-bottom: 90px;
   box-sizing: border-box;
@@ -373,12 +374,11 @@ nav.header {
     box-shadow: 3px 3px 0 #000000;
     position: absolute;
     bottom: 15px;
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Shift left by half its width to truly center */
-    box-sizing: border-box; /* Ensure padding/border don't break width on smaller screens */
-    max-width: calc(100% - 30px); /* Adjust to prevent horizontal overflow if card is very narrow */
-    text-align: center; /* Ensure text within the link is centered */
-    white-space: nowrap; /* Prevent line breaks within the link text if possible */
+    left: 15px;
+    right: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .project-link:hover {
@@ -539,6 +539,7 @@ footer {
         width: auto;
         height: auto;
         translate: 0 0;
+        padding: 15px 12px 90px 12px;
     }
 
     .card {
@@ -546,10 +547,6 @@ footer {
         height: 320px;
         margin: 0;
         padding-bottom: 80px;
-    }
-
-    .content {
-        padding: 15px 12px 80px 12px;
     }
 }
 
