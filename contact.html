@@ -12,27 +12,35 @@
         <nav class="header">
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li class="active"><a href="contact.html">Contact</a></li>
+                <li><a class="nav-link" href="projects.html">Projects</a></li>
+                <li class="active"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header> 
     
     <main>
+        <div class="contact-section">
         <div class="container">
             <div class="text-group-contact">
                 <h2>Contact Me!</h2>
-                <p>Feel free to reach out to me and send me a message. I'd love to hear from you!</p>
+                <p><b>Feel free to reach out to me and send me a message. I'd love to hear from you!</b></p>
                 <div class="contact-buttons-container">
                 <a href="mailto:paul.bellmann@gmail.com?subject=Your portfolio&body=Hello Paul," class="contact-button"><img src="./icons/email.png" alt="E-Mail Icon"></a>
                 <a href="https://www.linkedin.com/in/paul-bellmann" target="_blank" rel="noopener noreferrer" class="contact-button"><img src="./icons/linkedin.png" alt="LinkedIn Icon"></a>
                 </div>
             </div>
         </div>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2025 Paul's Portfolio Website</p>
     </footer>
+    <script src="hamburger.js"></script>
 </body>
 </html>

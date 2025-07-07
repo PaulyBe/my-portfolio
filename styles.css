@@ -5,7 +5,6 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #E5E5E5;
     background-attachment: fixed;
     font-size: 16px; /* Base font size for mobile */
     line-height: 1.6;
@@ -26,7 +25,7 @@ main {
 /* Header */
 
 header {
-    background: rgba(255, 255, 255, 0.95);
+    background: #DAF5F0;
     width: 100%;
     padding: 15px 20px;
     position: sticky;
@@ -59,7 +58,7 @@ nav.header {
     text-decoration: none;
     font-weight: 600;
     padding: 12px 24px;
-    background: #ffffff;
+    background: white;
     color: rgb(0, 0, 0);
     border-radius: 25px;
     transition: all 0.3s ease;
@@ -72,14 +71,15 @@ nav.header {
 }
 
 .nav-links li a:hover {
-    background: #b6f6ff;
+    background: #69D2E7;
 }
 
 .nav-links li.active a {
-    background: #6ED3CF;
+    background: #87CEEB;
     translate: 3px 3px;
     box-shadow: 0 0 0 #000000;
 }
+
 
 /* Body */
 
@@ -102,7 +102,6 @@ nav.header {
     width: 100%;
     font-weight: 500;
     font-size: 1.1rem;
-    text-align: center;
 }
 
 .text-group h2 {
@@ -124,12 +123,17 @@ nav.header {
 .home-intro-section {
     width: 100%;
     min-height: 80vh;
-    background: #E5E5E5;
-    display: flex;
+    --color: #E1E1E1;
+    background-color: #F3F3F3;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    background-size: 55px 55px;
+      display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    border-bottom: 2px solid #000000;
 }
 
 .home-intro-section::before {
@@ -190,9 +194,9 @@ nav.header {
 .about-me-section {
     width: 100%;
     padding: 60px 20px;
-    background: #DCDCDC;
+    background: #dae4f5;
     backdrop-filter: blur(10px);
-    margin: 40px 0;
+    margin: 0;
 }
 
 .about-me-container {
@@ -266,12 +270,18 @@ nav.header {
 
 /* Projects Section */
 
+.toolstack-section {
+    background-color: #f7f2d7;
+    border-bottom: 2px solid #000000;
+}
+
 .projects-section {
     width: 100%;
     padding: 60px 20px;
-    background: #DCDCDC;
+    background-image: linear-gradient(#ffffff 1.1rem, #ccc 1.2rem);
+    background-size: 100% 1.2rem;
     backdrop-filter: blur(10px);
-    margin: 40px 0;
+    margin: 0;
 }
 
 .projects-section .container {
@@ -314,10 +324,9 @@ nav.header {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    justify-content: flex-start;
-    gap: 15px;
-    margin: 30px 0;
+    justify-content: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .toolstack li {
@@ -397,14 +406,19 @@ nav.header {
 
 /* Contact Page */
 
+.contact-section {
+    background-color: rgb(212, 255, 212);
+    min-height: 100vh;
+}
+
 .text-group-contact {
     display: flex;
     flex-direction: column;
     width: 100%;
     font-weight: 500;
     font-size: 1.1rem;
-    text-align: center;
-    align-items: center;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .text-group-contact h2 {
@@ -468,12 +482,14 @@ nav.header {
 
 footer {
     text-align: center;
-    background: rgba(0, 0, 0, 0.2);
+    background: #DAF5F0;
     padding: 20px;
     font-weight: 600;
     font-size: 0.9rem;
     color: rgba(0, 0, 0, 0.8);
     margin-top: auto;
+    border-bottom: 2px solid #000000;
+    border-top: 2px solid #000000;
 }
 
 /* Media Queries for Tablet and Desktop */
@@ -496,6 +512,7 @@ footer {
     .nav-links {
         gap: 25px;
     }
+    
 
     /* Home Page */
     .container {
@@ -590,6 +607,19 @@ footer {
         padding-bottom: 80px;
     }
 }
+
+@media (max-width: 575px) {
+
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    max-width: 400px;
+    min-width: 0;
+    display: block;
+  }
+}
+
 
 @media (min-width: 1024px) {
     .container {
