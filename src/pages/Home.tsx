@@ -17,7 +17,7 @@ const Home = () => {
 
         {/* Sub-heading / Introduction Paragraph */}
         <p className="mt-4 text-lg sm:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto">
-          I enjoy building reponsive websites, with a focus on a user friendly UX/UI design. Feel free to check out some of my projects and send me a message.
+          I enjoy building responsive websites, with a focus on a user friendly UX/UI design. Feel free to check out some of my projects and send me a message.
         </p>
 
         {/* Button */}
