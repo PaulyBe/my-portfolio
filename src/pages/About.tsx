@@ -46,7 +46,7 @@ const iconMap: Record<string, string> = {
 
 const About = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-green-100 pt-30 pb-16 px-4 sm:px-6 lg:px-8">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-green-100 pt-30 pb-16 px-4 sm:px-6 lg:px-8 pt-20">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12">
           About Me
@@ -79,11 +79,11 @@ const About = () => {
                     <img
                       src={iconMap[item.iconType]}
                       alt={item.iconType}
-                      className="w-12 h-12 md:w-16 md:h-16 object-contain"
+                      className="w-12 h-12 md:w-16 md:h-12 object-contain"
                     />
                   </div>
                 </div>
-                {/* Positinierung Text und Icon */}
+                {/* Positonierung Text und Icon */}
                 <div className="hidden md:block w-5/12"></div>
               </div>
             </div>
