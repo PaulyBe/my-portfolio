@@ -29,11 +29,11 @@ const Home = () => {
           >
             About me
           </NavLink>
-        </div>
 
         {/* Background Elements */}
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
         <div className="absolute bottom-1/3 right-1/4 w-48 h-48 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
       </div>
     </section>
   );
