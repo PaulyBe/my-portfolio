@@ -7,7 +7,7 @@ const Home = () => {
         {/* Main Heading */}
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
           <span className="block text-gray-800">Hello, I'm Paul.</span>
-          <span className="block bg-gradient-to-r to-blue-800 from-green-700 bg-clip-text text-transparent leading-normal">
+          <span className="block bg-gradient-to-r from-blue-800 to-green-700 bg-clip-text text-transparent leading-normal">
             I'm an aspiring
           </span>
           <span className="block bg-gradient-to-r from-blue-800 to-green-700 bg-clip-text text-transparent">
@@ -17,7 +17,7 @@ const Home = () => {
 
         {/* Sub-heading / Introduction Paragraph */}
         <p className="mt-4 text-lg sm:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto">
-          I enjoy building responsive websites, with a focus on a user friendly UX/UI design. Feel free to check out some of my projects and send me a message.
+          I am passionate about creating responsive web solutions through thoughtful UX/UI design. Feel free to check out some of my projects and send me a message.
         </p>
 
         {/* Button */}
