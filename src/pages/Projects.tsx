@@ -54,7 +54,7 @@ const Contact = () => {
           Here are some of the projects I have been working on, to improve my coding skills.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-16">
           {projectsData.map((project) => (
             <div
               key={project.id}
