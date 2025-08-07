@@ -50,7 +50,7 @@ const Contact = () => {
           Websites
         </h2>
         <p className="text-lg text-gray-700 text-center max-w-2xl mx-auto mb-16">
-          Here are of the websites I built for other people. I removed personal information and solely kept the frontend.
+          Here are some of the websites I built for other people. I removed personal information and solely kept the frontend.
         </p>
 
         <div className="max-w-4xl mx-auto grid grid-cols-1 gap-16 pb-14">
@@ -80,7 +80,7 @@ const Contact = () => {
                          transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl flex flex-col">
               <div className="p-6 flex flex-col flex-1">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Billing Website</h3>
-                <p className="text-gray-700 text-base mb-4">A website I built for a client, that offers billing services. The client wanted a website with several page with information about his business. Furthermore, the website should have a contact form. I created a website with informational sections, set up the contact form and optimized it for mobile use.</p>
+                <p className="text-gray-700 text-base mb-4">A website I built for a client, that offers billing services. The client wanted a website with several pages with information about his business. Furthermore, the website should have a contact form. I created a website with informational sections, set up the contact form and optimized it for mobile use.</p>
                 <p className="text-gray-700 text-base mb-4 font-bold">The website is simply built with HTML, CSS and JavaScript</p>
                 <div className="text-center pt-10">
                 <a
