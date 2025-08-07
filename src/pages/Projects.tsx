@@ -45,12 +45,12 @@ const projectsData: Project[] = [
 const Contact = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-green-100 pt-30 pb-16 px-4 sm:px-6 lg:px-8 pt-20">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto pb-14">
         <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12">
           Websites
         </h2>
         <p className="text-lg text-gray-700 text-center max-w-2xl mx-auto mb-16">
-          Here are some of the websites I built for other people. I removed personal information and solely kept the frontend.
+          Here are of the websites I built for other people. I removed personal information and solely kept the frontend.
         </p>
 
         <div className="max-w-4xl mx-auto grid grid-cols-1 gap-16 pb-14">
@@ -60,7 +60,7 @@ const Contact = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Hairdresser Website</h3>
                 <p className="text-gray-700 text-base mb-4">A website I built for a client, that is a hairdresser. I decided to go for a single-page approach. The website should display some information about the shop, the employees and have its social media channels linked; as well as a form to book an appointment.</p>
                 <p className="text-gray-700 text-base mb-4 font-bold">The website is built in React with TypeScript and Tailwind CSS</p>
-                <div className="text-center">
+                <div className="text-center pt-10">
                 <a
                       href="https://paulybe.github.io/hairdresser_website/"
                       target="_blank"
@@ -82,7 +82,7 @@ const Contact = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Billing Website</h3>
                 <p className="text-gray-700 text-base mb-4">A website I built for a client, that offers billing services. The client wanted a website with several page with information about his business. Furthermore, the website should have a contact form. I created a website with informational sections, set up the contact form and optimized it for mobile use.</p>
                 <p className="text-gray-700 text-base mb-4 font-bold">The website is simply built with HTML, CSS and JavaScript</p>
-                <div className="text-center">
+                <div className="text-center pt-10">
                 <a
                       href="https://paulybe.github.io/billing_website/"
                       target="_blank"
@@ -97,7 +97,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12">
+        <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12 pt-24">
           Personal Projects
         </h2>
         <p className="text-lg text-gray-700 text-center max-w-2xl mx-auto mb-16">

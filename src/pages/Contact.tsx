@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { CiMail } from "react-icons/ci";
 
 export default function Contact() {
   const [result, setResult] = React.useState("");
@@ -66,6 +68,32 @@ export default function Contact() {
       </form>
       <span>{result}</span>
     </div>
+      <div className="pt-48 flex gap-4 justify-center">
+            <a
+              href="https://github.com/PaulyBe"
+              target="_blank" // New tab
+              rel="noopener noreferrer" // Security
+              className="w-20 h-20 md:w-28 md:h-28 rounded-full bg-white flex items-center justify-center shadow-md transition-transform duration-200 hover:scale-150 hover:bg-blue-700">
+                <span className="block md:hidden"><FaGithub size={48} color="black"/></span>
+                <span className="hidden md:block"><FaGithub size={70} color="black"/></span>
+              </a>
+              <a
+              href="https://www.linkedin.com/in/paul-bellmann/"
+              target="_blank" // New tab
+              rel="noopener noreferrer" // Security
+              className="w-20 h-20 md:w-28 md:h-28 rounded-full bg-white flex items-center justify-center shadow-md transition-transform duration-200 hover:scale-150 hover:bg-blue-700">
+                <span className="block md:hidden"><FaLinkedin size={48} color="black"/></span>
+                <span className="hidden md:block"><FaLinkedin size={70} color="black"/></span>
+              </a>
+              <a
+              href="mailto:paul.bellmann@gmail.com"
+              target="_blank" // New tab
+              rel="noopener noreferrer" // Security
+              className="w-20 h-20 md:w-28 md:h-28 rounded-full bg-white flex items-center justify-center shadow-md transition-transform duration-200 hover:scale-110 hover:bg-blue-700">
+                <span className="block md:hidden"><CiMail size={48} color="black"/></span>
+                <span className="hidden md:block"><CiMail size={70} color="black"/></span>
+              </a>
+      </div>
     </div>
     </section>
   );
