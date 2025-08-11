@@ -15,28 +15,28 @@ const projectsData: Project[] = [
   {
     id: 1,
     title: 'To Do-List',
-    description: 'A simple To Do List application, that allows users to add new tasks and delete old ones. Built with: HTML, CSS & JavaScript',
+    description: ['A simple To Do List application for adding new tasks and deleting old ones.', 'Built with: HTML, CSS & JavaScript'],
     icon: <CiCircleList size={80} color="#A78BFA" />,
     demoLink: 'https://paulybe.github.io/todolist/',
   },
   {
     id: 2,
     title: 'Card Game',
-    description: 'A card game to get to know people better, that displays random cards from a deck, with three different levels. Built with: React, Tailwind CSS & TypeScript',
+    description: ['A card game to get to know people better, that displays random cards from a deck, with three different levels.', 'Built with: React, Tailwind CSS & TypeScript'],
     icon: <TbCards size={80} color="lightblue" />,
     demoLink: 'https://1000questions.site/',
   },
   {
     id: 3,
     title: 'Tic-Tac-Toe',
-    description: 'The classic Tic-Tac-Toe game, where two players set "X" and "O" after each other, to get three in a row. Built with: HTML, CSS & JavaScript',
+    description: ['The classic Tic-Tac-Toe game, where two players set "X" and "O" after each other, to get three in a row.', 'Built with: HTML, CSS & JavaScript'],
     icon: <GiTicTacToe size={80} color="grey" />,
     demoLink: 'https://paulybe.github.io/tictactoe/',
   },
   {
     id: 4,
     title: 'Number Guesser',
-    description: 'A simple game, where you have to guess a number between 1 and 100. Built with: HTML, CSS & JavaScript',
+    description: ['A simple game, where you have to guess a number between 1 and 100.', 'Built with: HTML, CSS & JavaScript'],
     icon: <TbNumbers size={80} color="rgb(107, 167, 139)" />,
     demoLink: 'https://paulybe.github.io/numberguesser/',
   },
@@ -81,7 +81,7 @@ const Contact = () => {
               <div className="p-6 flex flex-col flex-1">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Billing Website</h3>
                 <p className="text-gray-700 text-base mb-4">A website I built for a client, that offers billing services. The client wanted a website with several pages with information about his business. Furthermore, the website should have a contact form. I created a website with informational sections, set up the contact form and optimized it for mobile use.</p>
-                <p className="text-gray-700 text-base mb-4 font-bold">The website is simply built with HTML, CSS and JavaScript</p>
+                <p className="text-gray-700 text-base mb-4 font-bold">The website is built with HTML, CSS and JavaScript</p>
                 <div className="text-center pt-10">
                 <a
                       href="https://paulybe.github.io/billing_website/"
@@ -110,7 +110,7 @@ const Contact = () => {
               className="bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden
                          transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl flex flex-col"
             >
-              <div className="w-full h-48 flex items-center justify-center border-b border-gray-200 bg-gray-50">
+              <div className="w-full h-40 flex items-center justify-center border-b border-gray-200 bg-gray-50">
                 {project.icon ? (
                   project.icon
                 ) : project.imageUrl ? (
@@ -122,24 +122,24 @@ const Contact = () => {
                   />
                 ) : null}
               </div>
-              <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
-                <p className="text-gray-700 text-base mb-4">{project.description}</p>
-                <div className="flex-1"></div>
-                {project.demoLink && (
-                  <div className="mt-8 flex flex-wrap gap-4">
-                    <a
-                      href={project.demoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-4 py-2 bg-blue-800 text-white text-sm font-medium rounded-full
+                             <div className="p-6 flex flex-col flex-1">
+                 <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
+                 <p className="text-gray-700 text-base mb-4">{project.description[0]}</p>
+                 <div className="mt-auto">
+                   <p className="text-gray-700 text-base font-bold mb-4">{project.description[1]}</p>
+                   {project.demoLink && (
+                     <a
+                       href={project.demoLink}
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       className="inline-flex items-center px-4 py-2 bg-blue-800 text-white text-sm font-medium rounded-full
                                  hover:bg-blue-700 transition-colors duration-200 shadow-md w-full justify-center"
-                    >
-                      Check it out
-                    </a>
-                  </div>
-                )}
-              </div>
+                     >
+                       Check it out
+                     </a>
+                     )}
+                 </div>
+               </div>
             </div>
           ))}
         </div>
