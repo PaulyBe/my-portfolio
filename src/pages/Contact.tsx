@@ -29,7 +29,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center background-paper pb-16 px-4 sm:px-6 lg:px-8 pt-24">
+    <section className="min-h-screen flex items-center justify-center background-paper pt-24 px-2">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12">
           Contact Me
@@ -68,7 +68,7 @@ export default function Contact() {
       </form>
       <span>{result}</span>
     </div>
-      <div className="pt-20 flex gap-4 justify-center md:pt-44">
+      <div className="pt-20 pb-44 flex gap-4 justify-center md:pt-44">
             <a
               href="https://github.com/PaulyBe"
               target="_blank" // New tab
