@@ -44,7 +44,7 @@ const projectsData: Project[] = [
 
 const Contact = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-green-100 pt-30 pb-16 px-4 sm:px-6 lg:px-8 pt-20">
+    <section className="min-h-screen flex items-center justify-center background-paper pb-16 px-4 sm:px-6 lg:px-8 pt-24">
       <div className="max-w-6xl mx-auto pb-14">
         <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12">
           Websites
@@ -65,8 +65,7 @@ const Contact = () => {
                       href="https://paulybe.github.io/hairdresser_website/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center w-56 min-w-min px-4 py-2 bg-blue-800 text-white text-sm font-medium rounded-full
-                                 hover:bg-blue-700 transition-colors duration-200 shadow-md justify-center"
+                      className="inline-flex items-center justify-center px-8 py-4 border text-base font-bold rounded-full shadow-lg text-gray-800 border-solid border-gray-800 transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2"
                     >
                       Check it out
                     </a>
@@ -87,8 +86,7 @@ const Contact = () => {
                       href="https://paulybe.github.io/billing_website/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center w-56 min-w-min px-4 py-2 bg-blue-800 text-white text-sm font-medium rounded-full
-                                 hover:bg-blue-700 transition-colors duration-200 shadow-md justify-center"
+                      className="inline-flex items-center justify-center px-8 py-4 border text-base font-bold rounded-full shadow-lg text-gray-800 border-solid border-gray-800 transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2"
                     >
                       Check it out
                     </a>
@@ -122,18 +120,18 @@ const Contact = () => {
                   />
                 ) : null}
               </div>
-                             <div className="p-6 flex flex-col flex-1">
-                 <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
-                 <p className="text-gray-700 text-base mb-4">{project.description[0]}</p>
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
+                <p className="text-gray-700 text-base mb-4">{project.description[0]}</p>
                  <div className="mt-auto">
-                   <p className="text-gray-700 text-base font-bold mb-4">{project.description[1]}</p>
-                   {project.demoLink && (
-                     <a
-                       href={project.demoLink}
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       className="inline-flex items-center px-4 py-2 bg-blue-800 text-white text-sm font-medium rounded-full
-                                 hover:bg-blue-700 transition-colors duration-200 shadow-md w-full justify-center"
+                  <p className="text-gray-700 text-base mb-4 font-bold">{project.description[1]}</p>
+                  {project.demoLink && (
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 border text-base font-bold text-gray-800 border-solid border-gray-800 rounded-full
+                                 transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 shadow-md w-full justify-center"
                      >
                        Check it out
                      </a>

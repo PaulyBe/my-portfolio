@@ -46,7 +46,7 @@ const iconMap: Record<string, string> = {
 
 const About = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-green-100 pt-30 pb-16 px-4 sm:px-6 lg:px-8 pt-20">
+    <section className="min-h-screen flex items-center justify-center background-paper pb-16 px-4 sm:px-6 lg:px-8 pt-24">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12">
           About Me
@@ -126,7 +126,7 @@ const About = () => {
             href="https://github.com/PaulyBe"
             target="_blank" // New tab
             rel="noopener noreferrer" // Security
-            className="w-20 h-20 md:w-28 md:h-28 rounded-full bg-white flex items-center justify-center shadow-md transition-transform duration-200 hover:scale-110 hover:bg-blue-700">
+            className="w-20 h-20 md:w-28 md:h-28 rounded-full bg-white flex items-center justify-center shadow-md transition-transform duration-200 hover:scale-110 hover:bg-gray-600">
               <span className="block md:hidden"><FaGithub size={48} color="black"/></span>
               <span className="hidden md:block"><FaGithub size={70} color="black"/></span>
             </a>

@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-green-100 py-16 px-4 sm:px-6 lg:px-8">
+    <section className="min-h-screen flex items-center justify-center background-paper py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto text-center">
         {/* Main Heading */}
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
@@ -24,15 +24,11 @@ const Home = () => {
         <div className="mt-10">
           <NavLink
             to="/about"
-            className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-blue-800 hover:bg-blue-700 transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="inline-flex items-center justify-center px-8 py-4 border text-base font-bold rounded-full shadow-lg text-gray-800 border-solid border-gray-800 transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2"
             onClick={() => {}}
           >
             About me
           </NavLink>
-
-        {/* Background Elements */}
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-48 h-48 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
         </div>
       </div>
     </section>

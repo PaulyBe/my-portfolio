@@ -26,28 +26,28 @@ function Navbar() {
         <div className={`flex-col md:flex-row md:flex gap-6 ${menuOpen ? 'flex' : 'hidden'} md:flex bg-white border-2 border-gray-300 z-50 md:bg-transparent md:border-none absolute md:static top-16 right-4 md:top-0 md:right-0 rounded md:rounded-none p-4 md:p-0`}>
           <NavLink
             to="/"
-            className={({ isActive }) => `bg-transparent font-semibold ${isActive ? 'text-blue-900' : 'text-gray-800'}`}
+            className={({ isActive }) => `bg-transparent font-semibold ${isActive ? 'text-gray-800 navbar-deco active' : 'text-gray-800 navbar-deco'}`}
             onClick={() => setMenuOpen(false)}
           >
             Home
           </NavLink>
           <NavLink
             to="/about"
-            className={({ isActive }) => `bg-transparent font-semibold ${isActive ? 'text-blue-900' : 'text-gray-800'}`}
+            className={({ isActive }) => `bg-transparent font-semibold ${isActive ? 'text-gray-800 navbar-deco active' : 'text-gray-800 navbar-deco'}`}
             onClick={() => setMenuOpen(false)}
           >
             About
           </NavLink>
           <NavLink
             to="/projects"
-            className={({ isActive }) => `bg-transparent font-semibold ${isActive ? 'text-blue-900' : 'text-gray-800'}`}
+            className={({ isActive }) => `bg-transparent font-semibold ${isActive ? 'text-gray-800 navbar-deco active' : 'text-gray-800 navbar-deco'}`}
             onClick={() => setMenuOpen(false)}
           >
             Projects
           </NavLink>
           <NavLink
             to="/contact"
-            className={({ isActive }) => `bg-transparent font-semibold ${isActive ? 'text-blue-900' : 'text-gray-800'}`}
+            className={({ isActive }) => `bg-transparent font-semibold ${isActive ? 'text-gray-800 navbar-deco active' : 'text-gray-800 navbar-deco'}`}
             onClick={() => setMenuOpen(false)}
           >
             Contact

@@ -2,25 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes blob {
-    0% {
-      transform: translate(0px, 0px) scale(1);
-    }
-    33% {
-      transform: translate(30px, -50px) scale(1.1);
-    }
-    66% {
-      transform: translate(-20px, 20px) scale(0.9);
-    }
-    100% {
-      transform: translate(0px, 0px) scale(1);
-    }
-  }
+.background-paper {
+  width: 100%;
+  height: 100%;
+  --color: #E1E1E1;
+  background-color: #F3F3F3;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+  background-size: 55px 55px;
+}
 
-  .animate-blob {
-    animation: blob 7s infinite cubic-bezier(0.6, 0.01, 0.3, 0.9);
-  }
+.navbar-deco {
+  position: relative;
+  text-decoration: none;
+}
 
-  .animation-delay-2000 { /* For the second blob to start later */
-    animation-delay: 2s;
-  }
+.navbar-deco::after {
+  content: '';
+  color: #1f2937;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-out;
+}
+
+.navbar-deco:hover::after,
+.navbar-deco.active::after {
+  transform: scaleX(1);
+}
