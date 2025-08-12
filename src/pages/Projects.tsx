@@ -5,7 +5,7 @@ import { GiTicTacToe } from "react-icons/gi";
 interface Project {
   id: number;
   title: string;
-  description: string;
+  description: string[];
   icon?: React.ReactNode;
   imageUrl?: string;
   demoLink?: string;
