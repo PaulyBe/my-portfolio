@@ -15,7 +15,7 @@ interface TimelineItem {
 
 const timelineData: TimelineItem[] = [
   {
-    description: 'I moved to Vienna in 2020 to pursue my Master´s degree in International Business Administration, with a focus on Data Science. While studying I also started working in consulting.',
+    description: 'I 2020 I started to pursue my Master´s degree in International Business Administration, with a focus on Data Science. While studying I also started working in consulting.',
     iconType: 'building',
   },
   {

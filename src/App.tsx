@@ -10,7 +10,7 @@ import ScrollToTop from './components/ScrollToTop'
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   return (
-    <nav className="fixed top-0 left-0 w-full bg-green/60 backdrop-blur-sm shadow p-4 z-10">
+    <nav className="absolute top-0 left-0 w-full backdrop-blur-sm shadow p-4">
       <div className="container mx-auto flex justify-end items-center">
         {/* Hamburger button for mobile */}
         <button

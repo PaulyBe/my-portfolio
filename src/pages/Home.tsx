@@ -8,7 +8,7 @@ const Home = () => {
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
           <span className="block text-gray-800">Hello, I'm Paul.</span>
           <span className="block bg-gradient-to-r from-blue-800 to-green-700 bg-clip-text text-transparent leading-normal">
-            I am a freelance
+            I'm a freelance
           </span>
           <span className="block bg-gradient-to-r from-blue-800 to-green-700 bg-clip-text text-transparent">
             Web Developer.
