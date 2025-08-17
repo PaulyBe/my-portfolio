@@ -95,7 +95,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12 pt-24">
+        <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12 pt-10">
           Personal Projects
         </h2>
         <p className="text-lg text-gray-700 text-center max-w-2xl mx-auto mb-16">

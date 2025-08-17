@@ -15,7 +15,7 @@ interface TimelineItem {
 
 const timelineData: TimelineItem[] = [
   {
-    description: 'I 2020 I started to pursue my Master´s degree in International Business Administration, with a focus on Data Science. While studying I also started working in consulting.',
+    description: 'In 2020 I started my Master´s degree in International Business Administration, with a focus on Data Science. While studying I also started working in consulting.',
     iconType: 'building',
   },
   {
@@ -89,7 +89,7 @@ const About = () => {
             </div>
           ))}
         </div>
-          <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12 pt-20">
+          <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12 pt-10">
             My Toolstack
           </h2>
           <div className="flex flex-wrap items-center justify-center max-w-xl gap-4 md:gap-8 pt-10 pb-20 mx-auto">
