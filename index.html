@@ -1,13 +1,264 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="png" href="/src/icons/tabicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paul's Portfolio</title>
-  </head>
-  <body class="min-h-screen bg-hero">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=MS+Sans+Serif:wght@300;400;500;700&family=Courier+New:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="browser-bar">
+                <div class="browser-buttons">
+                    <button class="browser-btn">←</button>
+                    <button class="browser-btn">→</button>
+                    <button class="browser-btn">⟳</button>
+                    <button class="browser-btn">⌂</button>
+                </div>
+                <div class="address-bar">
+                    <span class="url">https://paulybe.github.io/my-portfolio/</span>
+                </div>
+                <div class="browser-menu">
+                    <button class="menu-btn">File</button>
+                    <button class="menu-btn">Edit</button>
+                    <button class="menu-btn">View</button>
+                </div>
+            </div>
+            <div class="header-content">
+                <h1 class="name">
+                     Paul Bellmann<span class="blink">_</span>
+                </h1>
+                <p class="subtitle">Welcome to my personal homepage. Here I post projects and ideas, that I am currently working on.</p>
+            </div>
+        </header>
+
+        <nav class="nav">
+            <a href="#about" class="nav-link">About Me</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <main class="main">
+            <section id="about" class="section">
+                <h2 class="section-title">
+                    <img src="icons/user.ico" class="icon" width="30px" height="30px"> About Me
+                </h2>
+                <div class="content">
+                    <p>Hello! I'm Paul and I am passionate about coding, building tools and visualizing data. I love minimalist designs and turning problems into digital solutions.</p>
+                    <br>
+                    <p>When I'm not coding, I enjoy plaing tennis, riding my motorcycle and spending time outdoors!</p>
+                </div>
+            </section>
+
+            <section id="skills" class="section">
+                <h2 class="section-title">
+                    <img src="icons/skills.ico" class="icon" width="30px" height="30px"> Technical Skills
+                </h2>
+                <div class="content">
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3>Web Development</h3>
+                            <ul>
+                                <li>HTML5 & CSS3</li>
+                                <li>JavaScript & TypeScript</li>
+                                <li>React.js</li>
+                                <li>Wordpress</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Business Intelligence</h3>
+                            <ul>
+                                <li>Excel</li>
+                                <li>Power BI</li>
+                                <li>SQL</li>
+                                <li>VBA</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Development Tools</h3>
+                            <ul>
+                                <li>Git & GitHub</li>
+                                <li>VS Code</li>
+                                <li>Figma</li>
+                                <li>Docker</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <h2 class="section-title">
+                    <img src="icons/workinprogress.ico" class="icon" width="30px" height="30px"> Work in Progress
+                </h2>
+                <div class="content">
+                    <div class="projects-grid">
+                        <article class="project">
+                            <h3 class="project-title">Financial Dashboard</h3>
+                            <p class="project-desc">I am currently working with a start-up on a dashboard for data analysis, focusing on political and econmic data, where I am responsible for the development of the UX/UI.</p>
+                            <p class="project-desc">Update coming soon!</p>
+                        </article>
+
+                        <article class="project">
+                            <h3 class="project-title">Consulting Website</h3>
+                            <p class="project-desc">I am working with an American non-profit organization on the development of a website, to display their services.</p>
+                            <p class="project-desc">Update coming soon!</p>
+                        </article>
+
+                        <article class="project">
+                            <h3 class="project-title">Shopify Store</h3>
+                            <p class="project-desc">I am working with an artist on a Shopify store, where prints of the artist are sold.</p>
+                            <p class="project-desc">Update coming soon!</p>
+                        </article>
+
+                        <article class="project">
+                            <h3 class="project-title">Website Development</h3>
+                            <p class="project-desc">I am working with an American non-profit organization on the development of an exisiting website, to integreate new functionalities and gather information about its users.</p>
+                            <p class="project-desc">Update coming soon!</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <h2 class="section-title">
+                    <img src="icons/projects.ico" class="icon" width="30px" height="30px"> My Projects
+                </h2>
+                <div class="content">
+                    <div class="projects-grid">
+                        <article class="project">
+                            <h3 class="project-title">Band Website</h3>
+                            <p class="project-desc">A Wordpress based portfolio website for a band. The page includes information about the band, their music, pictures and a contact form.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Wordpress</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://thefatstacks.co.uk/" target="_blank" class="project-link">View Page</a>
+                            </div>
+                        </article>
+
+                        <article class="project">
+                            <h3 class="project-title">Hairdresser Website</h3>
+                            <p class="project-desc">A website I built for a client, that is a hairdresser (personal information removed). I decided to go for a single-page approach. The website should display some information about the shop, the employees and have its social media channels linked; as well as a form to book an appointment.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://paulybe.github.io/hairdresser_website/" target="_blank" class="project-link">View Page</a>
+                                <a href="https://github.com/PaulyBe/hairdresser_website" target="_blank" class="project-link">Source Code</a>
+                            </div>
+                        </article>
+
+                        <article class="project">
+                            <h3 class="project-title">Billing Website</h3>
+                            <p class="project-desc">A website I built for a client, that offers billing services. The client wanted a website with several pages with information about his business and a contact form. I created a website with informational sections, set up the contact form and optimized it for mobile use.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML & CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://paulybe.github.io/billing_website/" target="_blank" class="project-link">View Page</a>
+                                <a href="https://github.com/PaulyBe/billing_website" target="_blank" class="project-link">Source Code</a>
+                            </div>
+                        </article>
+
+                        <article class="project">
+                            <h3 class="project-title">Card Game</h3>
+                            <p class="project-desc">A card game to get to know people better, that displays random cards from a deck, with three different levels.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://1000questions.site/" target="_blank" class="project-link">View Page</a>
+                                <a href="https://github.com/PaulyBe/cardgame" target="_blank" class="project-link">Source Code</a>
+                            </div>
+                        </article>
+
+                        <article class="project">
+                            <h3 class="project-title">Tic-Tac-Toe</h3>
+                            <p class="project-desc">The classic Tic-Tac-Toe game, where two players set "X" and "O" after each other, to get three in a row.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML & CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://paulybe.github.io/tictactoe/" target="_blank" class="project-link">View Page</a>
+                                <a href="https://github.com/PaulyBe/tictactoe" target="_blank" class="project-link">Source Code</a>
+                            </div>
+                        </article>
+
+                        <article class="project">
+                            <h3 class="project-title">To Do-List</h3>
+                            <p class="project-desc">A simple To Do List application for adding new tasks and deleting old ones.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML & CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://paulybe.github.io/todolist/" target="_blank" class="project-link">View Page</a>
+                                <a href="https://github.com/PaulyBe/todolist" target="_blank" class="project-link">Source Code</a>
+                            </div>
+                        </article>
+
+                        <article class="project">
+                            <h3 class="project-title">Number Guesser</h3>
+                            <p class="project-desc">A simple game, where you have to guess a number between 1 and 100.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML & CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://paulybe.github.io/numberguesser/" target="_blank" class="project-link">View Page</a>
+                                <a href="https://github.com/PaulyBe/numberguesser" target="_blank" class="project-link">Source Code</a>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <h2 class="section-title">
+                    <img src="icons/contact.ico" class="icon" width="30px" height="30px"> Get In Touch
+                </h2>
+                <div class="content">
+                    <p>Let's connect and build something amazing together!</p>
+                    <br>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-label">Email:</span>
+                            <a href="mailto:paul.bellmann@gmail.com" class="contact-link">paul.bellmann@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">GitHub:</span>
+                            <a href="https://github.com/PaulyBe" target="_blank" class="contact-link">github.com/PaulyBe</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">LinkedIn:</span>
+                            <a href="https://www.linkedin.com/in/paul-bellmann/" target="_blank" class="contact-link">linkedin.com/paul-bellmann</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Location:</span>
+                            <span class="contact-text">Vienna, Austria</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>Thanks for visiting my homepage!</p>
+                <p class="copyright">© 2025 Paul Bellmann.</p>
+            </div>
+        </footer>
+    </div>
+</body>
 </html>
